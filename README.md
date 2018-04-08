@@ -1,1 +1,1 @@
-# Spice UI 
+# Spice UI
