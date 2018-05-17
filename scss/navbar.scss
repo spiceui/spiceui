@@ -1,0 +1,133 @@
+.spice-brand{
+	font-size: $navbar-font-size;
+	position: relative;
+
+	a{
+		font-size: $navbar-font-size;
+		padding: $navbar-padding;
+		display: block;
+		color: $font-color;
+		white-space: nowrap;
+
+		img{
+			width: $navbar-img-width;
+			height: $navbar-img-height;
+		}
+	}
+}
+
+.spice-navbar{
+	display: table;
+	width: 100%;
+
+	> *{
+		display: table-cell;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	.spice-brand{
+		width: 1%;
+
+		.spice-navbar-toggle{
+			display: none;
+			right: 0;
+			font-size: 22px;
+			@include center-top();
+			border: none;
+			z-index: 10;
+		}
+	}
+
+	.spice-nav{
+		@include inline-block();
+		vertical-align: middle;
+
+		> li{
+			@include inline-block();
+			vertical-align: middle;
+
+			> a{
+				padding: $navbar-nav-padding;
+				color: $font-color;
+				font-size: inherit;
+
+				&.spice-btn{
+					border: none;
+				}
+
+				i.spice-fa{
+					margin: 0 7px;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width:$screen-sm-max) {
+		text-align: center;
+		display: block;
+
+		> *{
+			display: block;
+		}
+
+		.spice-brand{
+			width: auto;
+
+			.spice-navbar-toggle{
+				display: block;
+			}
+		}
+
+		.spice-nav-navbar{
+			display: none;
+
+			&.spice-active{
+				display: block;
+			}
+		}
+
+		.spice-nav{
+			display: block;
+
+			> li{
+				display: block;
+				text-align: left;
+
+				> a{
+					padding: 10px 15px;
+				}
+				
+				&.spice-input-group-wrap{
+					padding: 10px 15px;
+				}
+			}
+
+		}
+
+		.spice-dropdown{
+			.spice-btn{
+				text-align: left;
+
+				.spice-caret{
+					@include center-top();
+					right: 15px;
+				}
+			}
+		}
+
+		.spice-dropdown-menu{
+			position: relative;
+			border-radius: 0;
+			border: none;
+			padding: 0;
+
+			a{
+				padding-top: 8px;
+				padding-bottom: 8px;
+			}
+		}
+
+	}
+	
+}

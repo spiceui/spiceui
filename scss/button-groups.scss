@@ -1,0 +1,17 @@
+.spice-btn-group{
+	@include float-clearfix();
+	@include inline-block();
+	border-radius: $btn-border-radius;
+	overflow: hidden;
+
+	.spice-btn{
+		float: left;
+		border-radius: 0;
+		border: none;
+		border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+		&:first-child{
+			border-left: transparent;
+		}
+	}
+}

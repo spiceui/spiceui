@@ -1,0 +1,66 @@
+.spice-pagination{
+  text-align: center;
+  font-size: 0;
+
+  &.spice-pagination-left{
+    text-align: left;
+  }
+
+  &.spice-pagination-right{
+    text-align: right;
+  }
+
+  .spice-page-numbers{
+    @include inline-block();
+    background-color: $page-bg-color;
+    border-radius: 2px;
+    margin: $page-margin;
+    padding: $page-padding;
+    font-size: $page-font-size;
+    color: $page-font-color;
+    vertical-align: middle;
+  }
+
+  .spice-page-dots{
+    background-color: transparent;
+  }
+
+  .spice-page-current{
+    background-color: $page-current-bg-color;
+    color: #ffffff;
+  }
+
+  .spice-page-all-numbers{
+    background-color: transparent;
+    color: $page-text-font-color
+  }
+
+  .spice-page-limits{
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .spice-page-skip{
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+
+    input{
+      width: $page-input-width;
+      margin: $page-input-margin;
+      height: $page-input-height;
+      padding: $page-input-padding;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .spice-btn{
+      height: $page-btn-height;
+      line-height: $page-btn-height;
+      padding: $page-btn-padding;
+      vertical-align: middle;
+      margin: $page-btn-margin;
+    }
+  }
+}

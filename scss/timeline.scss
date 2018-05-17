@@ -1,0 +1,66 @@
+.spice-timeline{
+	padding-left: 0;
+	list-style: none;
+
+	li{
+		list-style: none;
+	}
+
+	.spice-timeline-item{
+		&:last-child{
+			.spice-timeline-icon{
+				&:after{
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.spice-timeline-item{
+	position: relative;
+	display: table;
+	overflow: hidden;
+	padding-bottom: 15px;
+
+	> *{
+		display: table-cell;
+	}
+
+	.spice-timeline-icon{
+		position: relative;
+
+		&:before{
+			background-color: #fff;
+			z-index: 1;
+			position: relative;
+			padding-bottom: 2px;
+			width: 12px;
+			height: 12px;
+			content: "";
+			border: 1px solid;
+			display: block;
+			border-radius: 50%;
+		}
+
+		&:after{
+			content: "";
+			width: 1px;
+			height: 200%;
+			background-color: #e6e6e6;
+			@include center-left();
+			z-index: 0;
+			top: 20px;
+		}
+	}
+
+	.spice-timeline-content{
+		width: 100%;
+		padding-left: 10px;
+
+		h1, h2, h3, h4, h5, h6{
+			margin: 0;
+			font-size: 17px;
+		}
+	}
+}

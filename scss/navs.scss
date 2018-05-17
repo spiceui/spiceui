@@ -1,0 +1,72 @@
+.spice-nav{
+	padding-left: 0;
+	list-style: none;
+
+	ul, ol{
+		padding-left: 0;
+	}
+
+	li{
+		position: relative;
+		list-style: none;
+
+		a{
+			display: block;
+			padding: $nav-padding;
+
+			&:hover{
+				color: $font-color;
+			}
+
+		}
+
+		&.spice-active{
+			> a{
+				color: $font-color;
+			}
+		}
+	}
+	
+	> a{
+		@include inline-block();
+		padding: $nav-padding;
+		
+		&:hover, &.spice-active{
+			color: $font-color;
+		}
+	}
+
+}
+
+.spice-nav-pills{
+	li{
+		@include inline-block();
+		vertical-align: middle;
+	}
+}
+
+.spice-nav-tree{
+	li{
+		a{
+			position: relative;
+
+			.spice-caret{
+				@include caret-down();
+				@include center-top();
+				right: 10px;
+			}
+		}
+
+		ul{
+			display: none;
+		}
+
+		&.spice-active{
+			> a{
+				.spice-caret{
+					@include caret-up();
+				}
+			}
+		}
+	}
+}

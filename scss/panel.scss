@@ -1,0 +1,48 @@
+.spice-panel{
+	border: $panel-border;
+	border-radius: $panel-border-radius;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+.spice-panel-head{
+	padding: $panel-head-padding;
+	border-bottom: $panel-head-border;
+	@include float-clearfix();
+
+	> a{
+		float: left;
+		padding: $panel-head-a-padding;
+		position: relative;
+
+		&:before{
+			content: "";
+			height: 10px;
+    		width: 1px;
+    		background-color: #e2e2e2;
+    		@include center-top();
+    		left: $panel-head-a-left;
+		}
+
+		&:first-child{
+			padding: 0;
+
+			&:before{
+				display: none;
+			}
+		}
+
+		&.spice-active{
+			color: $font-color;
+		}
+	}
+}
+
+.spice-panel-foot{
+	padding: $panel-foot-padding;
+	border-top: $panel-foot-border;
+}
+
+.spice-panel-body{
+	padding: $panel-body-padding;
+}

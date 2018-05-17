@@ -1,0 +1,54 @@
+// Spice 栅格布局
+.spice-row {
+    position: relative;
+    @include float-clearfix();
+}
+
+[class*=spice-col-] {
+    position: relative;
+    padding-left:  $grid-padding-left;
+    padding-right: $grid-padding-right;
+    min-height: 1px;
+}
+
+@mixin calcGridCol($num:10, $class:'') {
+    @for $i from 1 through $num {
+        .spice-col#{$class}-#{$i} {
+            width: ( 100 / $num * $i) * 1%;
+            float: left;
+        }
+        
+        // 偏移
+        .spice-col#{$class}-offset-#{$i} {
+            left: ( 100 / $num * $i) * 1%;
+        }
+
+        // 排序
+        .spice-col#{$class}-pull-#{$i} {
+            right: ( 100 / $num * $i) * 1%;
+        }
+        .spice-col#{$class}-push-#{$i} {
+            left: ( 100 / $num * $i) * 1%;
+        }
+    }
+}
+
+@media all{
+    @include calcGridCol(12);
+}
+
+@media screen and (min-width:$screen-lg-min) {
+    @include calcGridCol(12, '-lg');
+}
+
+@media screen and (max-width: $screen-md-max) {
+    @include calcGridCol(12, '-md');
+}
+
+@media screen and (max-width:$screen-sm-max) {
+    @include calcGridCol(12, '-sm');
+}
+
+@media screen and (max-width:$screen-xs-max) {
+    @include calcGridCol(12, '-xs');
+}

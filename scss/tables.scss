@@ -1,0 +1,131 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+
+    > caption{
+		text-align: left;
+    }
+
+    > thead{
+		> tr{
+			> th{
+				text-align: left;
+			}
+		}
+	}
+
+	> tbody{
+		> tr{
+			> th, > td{
+				text-align: left;
+			}
+		}
+	}
+}
+
+.spice-table-bordered{
+	border: $table-border;
+
+	> thead{
+		> tr{
+			> th{
+				border: $table-border;
+				border-bottom: $table-theader-border;
+			}
+		}
+	}
+
+	> tbody{
+		> tr{
+			> th, > td{
+				border: $table-border;
+			}
+		}
+	}
+}
+
+.spice-table-striped{
+	> tbody{
+		> tr{
+			&:nth-child(odd){
+				background-color: $table-odd-bg-color;
+			}
+
+			&:nth-child(even){
+				background-color: $table-even-bg-color;
+			}
+		}
+	}
+}
+
+.spice-table-hover{
+	> tbody{
+		> tr:hover{
+			background-color: $table-odd-bg-color;
+		}
+	}
+}
+
+.spice-table{
+
+	> caption{
+		padding: $table-caption-padding;
+		color: $table-caption-color;
+    }
+
+	> thead{
+		> tr{
+			> th{
+				border-bottom: $table-theader-border;
+				padding: $table-td-padding;
+			}
+		}
+	}
+
+	> tbody{
+		> tr{
+			> th, > td{
+				border-top: $table-tbody-border;
+				padding: $table-td-padding;
+			}
+			
+			&, & > th, & > td{
+				&.spice-active{
+					background-color: $state-active-bg-color;
+					color: $state-active-font-color;
+				}
+
+				&.spice-disabled{
+					background-color: $state-disabled-bg-color;
+					color: $state-disabled-font-color;
+				}
+
+				&.spice-primary{
+					background-color: $state-primary-bg-color;
+					color: $state-primary-font-color;
+				}
+
+				&.spice-success{
+					background-color: $state-success-bg-color;
+					color: $state-success-font-color;
+				}
+
+				&.spice-warning{
+					background-color: $state-warning-bg-color;
+					color: $state-warning-font-color;
+				}
+
+				&.spice-error{
+					background-color: $state-error-bg-color;
+					color: $state-error-font-color;
+				}
+			}
+			
+		}
+	}	
+}
+
+.spice-table-responsive{
+	overflow-x: auto;
+}

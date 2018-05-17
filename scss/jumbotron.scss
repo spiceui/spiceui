@@ -1,0 +1,35 @@
+.spice-jumbotron{
+	padding: $jumbotron-padding;
+
+	h2{
+		font-size: $jumbotron-h2-font-size;
+		margin: $jumbotron-h2-margin;
+	}
+
+	p{
+		margin: $jumbotron-p-margin;
+	}
+}
+
+.spice-jumbotron-center{
+	text-align: center;
+}
+
+.spice-jumbotron-right{
+	text-align: right;
+}
+
+@media screen and (max-width:$screen-sm-max) {
+	.spice-jumbotron{
+		padding: $jumbotron-padding-sm;
+
+		h2{
+			font-size: $jumbotron-h2-font-size-sm;
+			margin: $jumbotron-h2-margin-sm;
+		}
+
+		p{
+			margin: $jumbotron-p-margin-sm;
+		}
+	}
+}

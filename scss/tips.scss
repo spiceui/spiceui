@@ -1,0 +1,38 @@
+.spice-tips{
+	background-color: rgba(0, 0, 0, 0);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0 15px;
+}
+
+.spice-tips-container{
+	@include center();
+	background-color: rgba(0, 0, 0, 0.85);
+	min-width: $tips-container-min-width;
+	border-radius: 5px;
+	position: relative;
+	max-width: 100%;
+	display: inline-block;
+	padding: $tips-container-padding;
+
+	.spice-fa{
+		color: #fff;
+		font-size: 30px;
+		display: block;
+		text-align: center;
+		margin: 0 0 15px;
+	}
+
+}
+
+.spice-tips-content{
+	color: #fff;
+	text-align: center;
+	// margin: 15px 0 0;
+}

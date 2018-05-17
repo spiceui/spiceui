@@ -1,0 +1,74 @@
+.spice-input-group{
+	display: table;
+	border: $from-control-border;
+	border-radius: $from-control-border-radius;
+	background-color: #fff;
+	width: 100%;
+
+	form{
+		display: table;
+	}
+
+	.spice-fa{
+		font-size: $font-size;
+	}
+
+	.spice-form-control, .spice-btn, .spice-input-btn-group, .spice-dropdown{
+		display: table-cell;
+	}
+
+	.spice-form-control{
+		border: none;
+		border-radius: 0;
+		background-color: transparent;
+	}
+
+	> .spice-btn, .spice-input-btn-group, .spice-dropdown{
+		width: 1%;
+	}
+
+	.spice-input-btn-group{
+		white-space: nowrap;
+		font-size: 0;
+		vertical-align: middle;
+
+		.spice-btn{
+			@include inline-block();
+			height: $from-control-height;
+		}
+	}
+
+	.spice-dropdown{
+
+		.spice-btn{
+			height: $from-control-height;
+		}
+
+		&:first-child{
+			.spice-btn{
+				border-right: $from-control-border;
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+		}
+
+		&:last-child{
+			.spice-btn{
+				border-left: $from-control-border;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			.spice-dropdown-menu{
+				left: auto;
+				right: 0;
+			}
+		}
+	}
+
+	.spice-btn{
+		padding-left: 10px;
+		padding-right: 10px;
+		border: none;
+	}
+}

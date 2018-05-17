@@ -1,0 +1,52 @@
+.spice-img-responsive{
+	display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.spice-img-thumbnail{
+	@include inline-block();
+	max-width: 100%;
+    height: auto;
+	border: $img-thumbnail-border;
+	padding: $img-thumbnail-padding;
+
+	img{
+		max-width: 100%;
+	}
+
+	.spice-caption{
+		padding: $img-thumbnail-caption-padding;
+		color: $font-color;
+
+		h3{
+			margin-top: 0;
+		}
+	}
+
+}
+
+.spice-img-thumbnail-column{
+	display: table;
+	padding: $img-thumbnail-column-padding;
+
+	> *{
+		display: table-cell;
+		vertical-align: top;
+	}
+
+	img{
+		width: 130px;
+		max-width: none;
+	}
+
+	.spice-caption{
+		width: 100%;
+		padding: $img-thumbnail-column-caption-padding;
+		color: $font-color;
+
+		h3{
+			margin-top: 0;
+		}
+	}
+}

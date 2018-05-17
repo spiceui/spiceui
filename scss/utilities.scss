@@ -1,0 +1,162 @@
+// 常用方法
+
+// 
+@mixin box-sizing( $box: border-box ){
+	box-sizing: $box;
+	-webkit-box-sizing: $box;
+	-moz-box-sizing: $box;
+}
+
+// 
+@mixin inline-block( $important: false ){
+  @if $important == true{
+    display: inline-block !important;
+    *display: inline !important;
+    *zoom: 1 !important;
+  }@else{
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+}
+
+// 清除浮动
+@mixin float-clearfix(){
+  clear: both !important;
+  &:after{
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+// 控制内容选中
+@mixin user-select( $select: none ){
+  user-select: $select;
+  -o-user-select: $select;
+  -moz-user-select: $select;
+  -khtml-user-select: $select;
+  -webkit-user-select: $select;
+}
+
+// 边框圆角
+@mixin border-radius( $radius: 4px ){
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+
+// 边框样式控制
+@mixin border( $width: 0, $style: solid, $color: transparent, $radius: 0 ){
+  border: $width $style $color;
+  @include border-radius( $radius );
+}
+
+// 透明度
+@mixin opacity( $opacity ){
+  $opacityPercentage: $opacity * 100;
+  opacity: $opacity;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity = #{$opacityPercentage});
+  filter: alpha(opacity = #{$opacityPercentage});
+}
+
+// 内容块默认居中
+@mixin center-block(){
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin center-left(){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  // -ms-transform: translateX(-50%);
+  // -moz-transform: translateX(-50%);
+  // -webkit-transform: translateX(-50%);
+  // -o-transform: translateX(-50%);
+}
+
+@mixin center-top(){
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  // -ms-transform: translateY(-50%);
+  // -moz-transform: translateY(-50%);
+  // -webkit-transform: translateY(-50%);
+  // -o-transform: translateY(-50%);
+}
+
+@mixin center(){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // -ms-transform: translate(-50%, -50%);
+  // -moz-transform: translate(-50%, -50%);
+  // -webkit-transform: translate(-50%, -50%);
+  // -o-transform: translate(-50%, -50%);
+}
+
+@mixin transform-rotate( $val: 0 ){
+  transform:rotate($val);
+  // -ms-transform:rotate($val);
+  // -moz-transform:rotate($val);
+  // -webkit-transform:rotate($val);
+  // -o-transform:rotate($val);
+}
+
+// 三角形
+@mixin caret-down(){
+  border: none;
+  border-left: $caret-size solid transparent;
+  border-right: $caret-size solid transparent;
+  border-top: $caret-size solid;
+  width: 0;
+  height: 0;
+  @include inline-block();
+  vertical-align: middle;
+}
+
+@mixin caret-up(){
+  border: none;
+  border-left: $caret-size solid transparent;
+  border-right: $caret-size solid transparent;
+  border-bottom: $caret-size solid;
+  width: 0;
+  height: 0;
+  @include inline-block();
+  vertical-align: middle;
+}
+
+@mixin caret-left(){
+  border: none;
+  border-top: $caret-size solid transparent;
+  border-bottom: $caret-size solid transparent;
+  border-right: $caret-size solid;
+  width: 0;
+  height: 0;
+  @include inline-block();
+  vertical-align: middle;
+}
+
+@mixin caret-right(){
+  border: none;
+  border-top: $caret-size solid transparent;
+  border-bottom: $caret-size solid transparent;
+  border-left: $caret-size solid;
+  width: 0;
+  height: 0;
+  @include inline-block();
+  vertical-align: middle;
+}
+
+@mixin box-shadow($shadow){
+  box-shadow: $shadow;
+  // -webkit-box-shadow: $shadow;
+  // -moz-box-shadow: $shadow;
+  // -ms-box-shadow: $shadow;
+  // -o-box-shadow: $shadow;
+}

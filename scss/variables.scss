@@ -1,0 +1,274 @@
+// Spice 常用变量
+
+// 背景色
+$body-bg: #f2f2f2;
+
+// 默认字体颜色
+$font-family: Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif;
+$font-size: 14px;
+$font-line-height: 20/14;
+$font-color: #333333;
+
+// 链接颜色
+$link-font-color: #4f9fcf;
+
+$font-size-large: ceil(($font-size * 1.25)); // ~18px
+$font-size-small: ceil(($font-size * 0.85)); // ~12px
+$font-size-h1: floor(($font-size * 2.6)); // ~36px
+$font-size-h2: floor(($font-size * 2.15)); // ~30px
+$font-size-h3: ceil(($font-size * 1.7)); // ~24px
+$font-size-h4: ceil(($font-size * 1.25)); // ~18px
+$font-size-h5: $font-size;
+$font-size-h6: ceil(($font-size * 0.85)); // ~12px
+
+$line-height-computed: floor(($font-size * $font-line-height)); // ~20px;
+
+$h1-mg-top: $line-height-computed;
+$h1-mg-bottom: $line-height-computed/2;
+
+$h2-mg-top: $h1-mg-top;
+$h2-mg-bottom: $h1-mg-bottom;
+
+$h3-mg-top: $h1-mg-top;
+$h3-mg-bottom: $h1-mg-bottom;
+
+$h4-mg-top: $line-height-computed/2;
+$h4-mg-bottom: $line-height-computed/2;
+
+$h5-mg-top: $h4-mg-top;
+$h5-mg-bottom: $h4-mg-bottom;
+
+$h6-mg-top: $h4-mg-top;
+$h6-mg-bottom: $h4-mg-bottom;
+
+// 响应式区间
+// $screen-min: 1025px;
+// $screen-max: 1300px;
+
+$screen-lg-min: 1301px;
+
+$screen-md-min: 769px;
+$screen-md-max: 1200px;
+
+$screen-sm-min: 641px;
+$screen-sm-max: 768px;
+
+$screen-xs-max: 640px;
+
+// 浮动
+$position: fixed, absolute, relative, static;
+
+// 字体对齐
+$text-align: left, center, right, justify;
+
+// 三角形大小
+$caret-size: 4px;
+
+// container
+$container-max-width: 1300px;
+$container-pd-left: 15px;
+$container-pd-right: 15px;
+
+// article
+$article-pd: 15px;
+
+// 禁用按钮透明度
+$btn-disabled-opacity: 0.7;
+
+// 栅格间距
+$grid-padding-left: 10px;
+$grid-padding-right: 10px;
+
+// hr
+$hr-border-color: #eee;
+$hr-margin: 20px auto;
+
+// nav
+$nav-padding: 5px 15px;
+
+// navbar
+$navbar-font-size: 18px;
+$navbar-padding: 15px;
+$navbar-img-width: 28px;
+$navbar-img-height: $navbar-img-width;
+$navbar-nav-padding: 17px 15px;
+
+// code
+$code-padding: 2px 4px;
+$code-margin: 0 5px;
+$code-font-size: 90%;
+$code-font-color: #c7254e;
+$code-bg-color: #f9f2f4;
+$code-border-radius: 4px;
+
+// btn
+$btn-padding: 5px 18px;
+$btn-font-color: $font-color;
+$btn-border-radius: 5px;
+$btn-bg-color: #fff;
+$btn-font-size: 14px;
+
+$btn-lg-padding: 10px 25px;
+$btn-lg-font-size: 18px;
+
+$btn-sm-padding: 3px 12px;
+$btn-sm-font-size: 13px;
+
+$btn-xs-padding: 2px 8px;
+$btn-xs-font-size: 12px;
+
+// btn default
+$btn-default-border-color: #ccc;
+$btn-default-bg-color: $btn-bg-color;
+
+// dropdown
+$dropdown-bg-color: #fff;
+$dropdown-border-color: $btn-default-border-color;
+$dropdown-border-radius:4px;
+$dropdown-menu-padding: 5px 0;
+$dropdown-font-color: $font-color;
+$dropdown-font-padding: 2px 17px;
+$dropdown-caret-margin: 0 0 0 5px;
+
+// 状态设置
+$state-active-bg-color: #ffd;
+$state-active-font-color: $font-color;
+
+$state-disabled-bg-color: transparent;
+$state-disabled-font-color: #999;
+
+$state-primary-bg-color: #e5f2fa;
+$state-primary-font-color: #1777aa;
+
+$state-success-bg-color: #edf7ed;
+$state-success-font-color: #61b862;
+
+$state-warning-bg-color: #fdf0e7;
+$state-warning-font-color: #f17b2e;
+
+$state-error-bg-color: #fbebeb;
+$state-error-font-color: #db5250;
+
+//table
+$table-border: 1px solid #ddd;
+
+$table-theader-border: 2px solid #ddd;
+$table-td-padding: 10px 15px;
+
+$table-tbody-border: 1px solid #ddd;
+
+$table-odd-bg-color: #f9f9f9;
+$table-even-bg-color: #ffffff;
+
+$table-caption-padding: 8px 0;
+$table-caption-color: #777;
+
+// from
+$from-placeholder-font-color: #bcbcbc;
+$from-placeholder-font-size: 14px;
+
+$from-margin: -15px 0;
+$from-group-margin: 15px 0;
+$from-control-border: 1px solid #ddd;
+$from-control-padding: 4px 10px;
+$from-control-height: 36px;
+$from-control-border-radius: 4px;
+
+$border-radius: 5px;
+$border-circle: 50%;
+
+// 图片
+$img-thumbnail-border: 1px solid #ddd;
+$img-thumbnail-padding: 4px;
+$img-thumbnail-caption-padding: 10px 5px 5px 5px;
+$img-thumbnail-column-padding: 10px;
+$img-thumbnail-column-caption-padding: 0 0 0 10px;
+
+// tab 选项卡
+$tab-title-padding: 8px 20px;
+$tab-title-border: 1px solid #ddd;
+$tab-content-padding: 10px;
+
+// 翻页
+$page-font-color: $font-color;
+$page-font-size: 13px;
+$page-padding: 10px 15px;
+$page-margin: 0 5px;
+$page-bg-color: #eee;
+$page-current-bg-color: #444;
+$page-text-font-color: #999999;
+$page-input-width: 40px;
+$page-input-height: 30px;
+$page-input-margin: 0 10px;
+$page-input-padding: 0 3px;
+$page-btn-height: $page-input-height;
+$page-btn-padding: 0 10px;
+$page-btn-margin: 0 0 0 10px;
+
+// 面板
+$panel-border: 1px solid #ddd;
+$panel-border-radius: 4px;
+$panel-body-padding: 15px;
+$panel-head-padding: 15px 15px;
+$panel-head-border: 1px solid #ddd;
+$panel-foot-padding: $panel-head-padding;
+$panel-foot-border: $panel-head-border;
+$panel-head-a-padding: 0 0 0 31px;
+$panel-head-a-left: (31px-1px)/2;
+
+// 评论
+$comments-avatar-width: 32px;
+$comments-avatar-height: $comments-avatar-width;
+$comments-avatar-border-radius: 50%;
+
+$comments-content-padding: 0 0 0 42px;
+
+// 弹出层
+$dialog-container-margin: 80px auto;
+$dialog-container-min-width: 300px;
+$dialog-close-width: 34px;
+$dialog-close-height: $dialog-close-width;
+$dialog-close-font-size: 24px;
+$dialog-header-padding: 8px 35px 8px 15px;
+$dialog-content-padding: 15px;
+
+// 提示框
+$tips-container-min-width: 300px;
+$tips-container-padding: 15px;
+
+// 巨幕
+$jumbotron-padding: 95px 80px;
+$jumbotron-h2-font-size: 50px;
+$jumbotron-h2-margin: 15px 0;
+$jumbotron-p-margin: $jumbotron-h2-margin;
+
+$jumbotron-padding-sm: 40px 20px;
+$jumbotron-h2-font-size-sm: 30px;
+$jumbotron-h2-margin-sm: 10px 0;
+$jumbotron-p-margin-sm: $jumbotron-h2-margin-sm;
+
+// theme
+$header-default-bg-color: #444;
+$header-default-font-color: #ccc;
+$header-default-font-hover-color: #fff;
+$header-default-font-active-bg-color: #555;
+// $header-default-submenu-font-color: #fff;
+// $header-default-submenu-font-bg-color: #666;
+
+$footer-default-bg-color: $header-default-bg-color;
+$footer-default-padding: 30px 15px;
+$footer-default-margin: 20px 0 0 0;
+
+$nav-tree-default-bg-color: $header-default-bg-color;
+$nav-tree-default-font-color: $header-default-font-color;
+$nav-tree-default-font-hover-color: $header-default-font-hover-color;
+$nav-tree-default-a-padding: 10px 20px;
+$nav-tree-default-submenu-bg-color: #333;
+$nav-tree-default-fa-margin: 0 10px 0 0;
+
+$tab-title-default-bg-color: $header-default-bg-color;
+$tab-title-default-font-color: $nav-tree-default-font-color;
+$tab-title-default-li-border: 1px solid $header-default-bg-color;
+$tab-title-brief-li-border: 2px solid $header-default-bg-color;
+
+$panel-head-default-bg-color: $header-default-bg-color;

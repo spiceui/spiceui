@@ -1,0 +1,361 @@
+@import "variables.scss";
+@import "utilities.scss";
+
+$sidebar-bg-color: $header-default-bg-color;
+$sidebar-width: 220px;
+$sidebar-shrink-width: 63px;
+
+html, body{
+	height: 100%;
+}
+
+.spice-brand-right{
+	display: none;
+}
+
+.spice-admin-wrapper{
+	height: 100%;
+
+	.spice-header{
+		border-bottom: 1px solid #eeeeee;
+		padding-right: 15px;
+		position: fixed;
+		width: 100%;
+		padding-left: $sidebar-width;
+		left: 0;
+		transition: all .3s;
+    	-webkit-transition: all .3s;
+    	z-index: 10;
+    	background-color: #fff;
+
+		.spice-dropdown-menu{
+			a{
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+.spice-admin-sidebar{
+	background-color: $sidebar-bg-color;
+	width: $sidebar-width;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: all .3s;
+    -webkit-transition: all .3s;
+
+	.spice-brand{
+		margin: 0;
+		background-color: $sidebar-bg-color;
+		position: fixed;
+		z-index: 10;
+		width: $sidebar-width;
+		transition: all .3s;
+    	-webkit-transition: all .3s;
+
+    	.spice-fa{
+    		margin-right: 10px;
+    	}
+
+		a{
+			color: #fff;
+
+			img{
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.spice-nav{
+		margin-top: 60px;
+		margin-bottom: 20px;
+
+		a{
+			white-space: nowrap;
+		}
+	}
+}
+
+.spice-admin-content{
+	transition: all .3s;
+    -webkit-transition: all .3s;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding-left: $sidebar-width;
+    padding-top: 54px;
+    overflow: auto;
+    z-index: 5;
+    left: 0;
+    background-color: #fff;
+
+    .spice-tab{
+    	height: 100%;
+    	padding-top: 43px;
+    }
+
+    .spice-tab-title{
+    	padding: 0 10px;
+    	padding-left: $sidebar-width + 10px;
+    	background-color: #fff;
+    	// -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    	// box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    	@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+    	border-bottom: none;
+    	position: fixed;
+    	background-color: #fff;
+    	width: 100%;
+    	left: 0;
+    	top: 54px;
+    	transition: all .3s;
+    	-webkit-transition: all .3s;
+
+    	li{
+    		padding-top: 12px;
+    		padding-bottom: 12px;
+    	}
+    }
+
+    .spice-tab-content{
+    	height: 100%;
+
+    	.spice-tab-item{
+			height: 100%;    		
+    	}
+
+    	iframe{
+    		width: 100%;
+    		height: 100%;
+    	}
+    }
+}
+
+.spice-admin-shrink-left{
+	
+	.spice-header{
+		padding-left: $sidebar-shrink-width;
+	}
+
+	.spice-admin-content{
+		padding-left: $sidebar-shrink-width;
+	}
+
+	.spice-brand{
+		text-align: center;
+		width: $sidebar-shrink-width;
+
+		.spice-fa{
+			margin: 0;
+		}
+
+		span{
+			display: none;
+		}
+	}
+
+	.spice-tab-title{
+		padding-left: $sidebar-shrink-width + 10px;
+	}
+
+	.spice-admin-sidebar{
+		width: $sidebar-shrink-width;
+	}
+}
+
+@media screen and (min-width: 1023px) {
+	.spice-admin-shrink-left{
+		.spice-nav-tree{
+			text-align: center;
+
+			.spice-fa{
+				margin: 0;
+			}
+
+			span{
+				display: none;
+			}
+
+			.spice-caret{
+				display: none !important;
+			}
+
+			ul{
+				display: none !important;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1023px) {
+	html, body{
+		overflow-x: hidden;
+	}
+    .spice-admin-wrapper{
+    	width: 100%;
+
+    	.spice-header{
+    		padding-left: 0;
+    		padding-right: 0;
+    	}
+
+    	.spice-admin-sidebar{
+	    	left: -$sidebar-width;
+	    	width: $sidebar-width;
+
+	    	.spice-brand{
+		    	left: 0;
+		    	background-color: transparent;
+		    	width: auto;
+		    	@include center-left();
+		    	position: fixed;
+
+		    	a{
+		    		color: #444;
+		    	}
+
+		    	span{
+		    		display: inline;
+		    	}
+		    }
+	    }
+	    .spice-admin-content{
+	    	padding-left: 0;
+
+	    	.spice-tab-title{
+	    		padding-left: 0;
+	    	}
+	    }
+
+	    .spice-nav-tree{
+	    	text-align: left;
+
+	    	.spice-fa{
+	    		margin: $nav-tree-default-fa-margin;
+	    	}
+
+	    	span{
+	    		display: inline;
+	    	}
+
+	    	.spice-caret{
+	    		display: block !important;
+	    	}
+	    	
+	    }
+
+    }
+
+    
+
+    .spice-navbar{
+    	.spice-brand{
+    		width: auto;
+    	}
+
+    	.spice-brand-left{
+    		float: left;
+    	}
+
+    	.spice-brand-right{
+    		float: right;
+    		display: block;
+    	}
+
+    	.spice-nav-navbar{
+	    	display: block;
+	    	position: fixed;
+	    	width: $sidebar-width;
+	    	background-color: #fff;
+	    	height: 100%;
+	    	overflow-y: auto;
+	    	top: 0;
+	    	right: -$sidebar-width;
+			padding-top: 60px;
+			padding-bottom: 20px;
+			border-left: 1px solid #eee;
+			transition: all .3s;
+    		-webkit-transition: all .3s;
+
+			.spice-dropdown-menu {
+			    position: relative;
+			    border-radius: 0;
+			    border: none;
+			    padding: 0;
+			}
+
+	    	.spice-nav{
+	    		float: none !important;
+
+	    		.spice-refresh{
+		    		display: none;
+		    	}
+	    	}
+	    }
+    }
+
+    .spice-admin-shrink-left{
+    	left: $sidebar-width;
+
+    	.spice-header{
+    		left: $sidebar-width;
+    	}
+
+    	.spice-admin-sidebar{
+	    	left: 0;
+	    	width: $sidebar-width;
+
+	    	.spice-brand{
+	    		transform:translateX($sidebar-width);
+				// -ms-transform:translateX($sidebar-width);
+				// -moz-transform:translateX($sidebar-width);
+				// -webkit-transform:translateX($sidebar-width);
+				// -o-transform:translateX($sidebar-width);
+	    	}
+	    }
+
+    	.spice-admin-content{
+			padding-left: $sidebar-width;
+
+	    	.spice-tab-title{
+	    		left: $sidebar-width;
+	    	}
+	    }
+    }
+
+    .spice-admin-shrink-right{
+		.spice-header{
+			left: -$sidebar-width;
+		}
+
+		.spice-navbar{
+			.spice-nav-navbar{
+				right: 0;
+			}
+		}
+
+		.spice-admin-sidebar{
+
+	    	.spice-brand{
+	    		transform:translateX(-$sidebar-width);
+				// -ms-transform:translateX(-$sidebar-width);
+				// -moz-transform:translateX(-$sidebar-width);
+				// -webkit-transform:translateX(-$sidebar-width);
+				// -o-transform:translateX(-$sidebar-width);
+	    	}
+	    }
+
+	    .spice-admin-content{
+	    	left: -$sidebar-width;
+
+	    	.spice-tab-title{
+	    		left: -$sidebar-width;
+	    	}
+	    }
+    }
+}

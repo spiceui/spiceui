@@ -1,0 +1,19 @@
+code, .spice-code{
+	padding: $code-padding;
+	margin: $code-margin;
+	font-size: $code-font-size;
+    color: $code-font-color;
+    background-color: $code-bg-color;
+    border-radius: $code-border-radius;
+}
+
+pre{
+	code, .spice-code{
+		padding: 0;
+		margin: 0;
+		font-size: inherit;
+    	color: inherit;
+    	background-color: transparent;
+    	border-radius: 0;
+	}
+}

@@ -1,0 +1,354 @@
+// Spice文档
+
+* {
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+    @include box-sizing();
+
+    &:before, &:after {
+        @include box-sizing();
+    }
+}
+
+// input search 去除叉叉图标
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration{
+    display: none;
+}
+
+html{
+    min-height: 100%;
+}
+
+html,body {
+    width: 100%;
+    font-family: $font-family;
+    line-height: $font-line-height;
+    position: relative;
+    font-size: $font-size;
+    color: $font-color;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: $link-font-color;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    color: transparent;
+    height: auto;
+}
+
+textarea {
+    resize: none;
+}
+
+select{
+    border: $from-control-border;
+}
+
+select, option{
+    outline: none;
+    font-family: $font-family;
+}
+
+select[multiple]{
+    height: auto;
+}
+
+textarea,
+input,
+button {
+    font-family: $font-family;
+    outline: none;
+    border: $from-control-border;
+    font-size: $font-size;
+    line-height: $font-line-height;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color: $from-placeholder-font-color; 
+    font-size: $from-placeholder-font-size;
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color: $from-placeholder-font-color; 
+    font-size: $from-placeholder-font-size;
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color: $from-placeholder-font-color; 
+    font-size: $from-placeholder-font-size;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color: $from-placeholder-font-color; 
+    font-size: $from-placeholder-font-size;
+}
+
+button, input[type="text"], input[type="password"], input[type="number"], input[type="email"],input[type="search"], textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+button, input[type="button"]{
+	@include user-select();
+}
+
+input[type="file"] {
+    display: block;
+    border: none;
+    font-size: 14px;
+    line-height: normal;
+}
+
+label{
+    @include inline-block();
+    margin-bottom: 3px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+}
+
+h1, .spice-h1 {
+    font-size: $font-size-h1;
+    margin-top: $h1-mg-top;
+    margin-bottom: $h1-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 65%;
+        margin-left: 5px;
+    }
+}
+h2, .spice-h2 {
+    font-size: $font-size-h2;
+    margin-top: $h2-mg-top;
+    margin-bottom: $h2-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 65%;
+        margin-left: 5px;
+    }
+}
+h3, .spice-h3 {
+    font-size: $font-size-h3;
+    margin-top: $h2-mg-top;
+    margin-bottom: $h2-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 65%;
+        margin-left: 5px;
+    }
+}
+h4, .spice-h4 {
+    font-size: $font-size-h4;
+    margin-top: $h4-mg-top;
+    margin-bottom: $h4-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 75%;
+        margin-left: 5px;
+    }
+}
+h5, .spice-h5 {
+    font-size: $font-size-h5;
+    margin-top: $h5-mg-top;
+    margin-bottom: $h5-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 75%;
+        margin-left: 5px;
+    }
+}
+h6, .spice-h6 {
+    font-size: $font-size-h6;
+    margin-top: $h6-mg-top;
+    margin-bottom: $h6-mg-bottom;
+    line-height: 1.2;
+
+    small, .spice-small{
+        font-size: 75%;
+        margin-left: 5px;
+    }
+}
+
+ul, ol{
+    padding-left: 20px;
+}
+
+dt{
+    font-weight: bold;
+}
+
+p {
+    margin: $line-height-computed/2 0;
+}
+
+hr{
+    display: block;
+    padding: 0;
+    border: 0;
+    height: 0;
+    border-top: 1px solid $hr-border-color;
+    margin: $hr-margin;
+}
+
+address{
+    font-style: normal;
+}
+
+blockquote {
+    padding: 5px 20px;
+    border-left: 5px solid #eee;
+
+    p{
+        margin: 0;
+    }
+
+    footer{
+        color: #999;
+        font-size: 14px;
+    }
+}
+
+.spice-lead{
+    font-size: floor(($font-size * 1.15));
+}
+
+// 禁止浏览器选中
+.spice-no-select {
+    @include user-select();
+}
+
+// 状态类
+// 禁用状态
+input[disabled], textarea[disabled]{
+    background-color: #eee;
+}
+
+.spice-disabled, [disabled] {
+    background-color: #eee;
+
+    &, &:hover{
+        opacity: $btn-disabled-opacity !important;
+        -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity = #{$btn-disabled-opacity * 100}) !important;
+        filter: alpha(opacity = #{$btn-disabled-opacity * 100}) !important;
+    }
+    
+    &,
+    > * {
+        cursor: not-allowed !important;
+    }
+}
+
+// 活动状态
+.spice-active {}
+
+// 成功状态
+.spice-success {}
+
+// 警告状态
+.spice-warning {}
+
+// 错误状态
+.spice-error {}
+
+// 当前选择状态
+.spice-current {}
+
+.spice-radius{
+    border-radius: $border-radius;
+}
+
+.spice-circle{
+    border-radius: $border-circle;
+}
+
+// 改变大小写
+.spice-text-lowercase{
+    text-transform: lowercase;
+}
+.spice-text-uppercase{
+    text-transform: uppercase;
+}
+.spice-text-capitalize{
+    text-transform: capitalize;
+}
+
+// 
+#spice-wrapper{
+    position: relative;
+}
+
+// 内容区域
+.spice-container{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// 顶部底部样式
+.spice-header, .spice-footer{
+    .spice-container{
+        padding-left: $container-pd-left;
+        padding-right: $container-pd-right;
+        max-width: $container-max-width;
+    }
+    .spice-container-full{
+        padding: 0;
+        max-width: 100%;
+    }
+}
+
+// 固定头部
+.spice-header{
+    &.spice-header-fixed{
+        position: sticky;
+        top: 0;
+        z-index: 200;
+    }
+}
+
+// 固定底部
+.spice-footer{
+    &.spice-footer-fixed{
+        position: sticky;
+        top: 0;
+        z-index: 200;
+    }
+}
+
+.spice-article{
+    padding: $article-pd;
+    max-width: $container-max-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.spice-article-full{
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+}

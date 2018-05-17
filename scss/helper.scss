@@ -1,0 +1,145 @@
+// 三角形
+.spice-icon-caret-down {
+    @include caret-down();
+}
+
+.spice-icon-caret-up {
+    @include caret-up();
+}
+
+.spice-icon-caret-left {
+    @include caret-left();
+}
+
+.spice-icon-caret-right {
+    @include caret-right();
+}
+
+// 居中
+.spice-center-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// 左右居中
+.spice-center-left{
+    @include center-left();    
+}
+
+// 上下居中
+.spice-center-top{
+    @include center-top();    
+}
+
+// 上下左右居中
+.spice-center{
+    @include center();    
+}
+
+@mixin baseHelper($class:'') {
+    // 显示设置
+    .spice-none#{$class} {
+        display: none !important;
+    }
+    .spice-block#{$class} {
+        display: block !important;
+    }
+    .spice-invisible#{$class} {
+    	visibility: hidden !important;
+    }
+    .spice-inline#{$class} {
+        display: inline !important;
+    }
+    .spice-inline-block#{$class} {
+        @include inline-block( true );
+    }
+    // 浮动设置
+    .spice-float-left#{$class} {
+        float: left !important;
+    }
+    .spice-float-right#{$class} {
+        float: right !important;
+    }
+    .spice-float-clearfix#{$class} {
+        @include float-clearfix();
+    }
+    // 定位设置
+    @each $val in $position {
+        .spice-#{$val}#{$class} {
+            position: $val !important;
+        }
+    }
+    // 字体对齐
+    @each $val in $text-align {
+        .spice-text-#{$val}#{$class} {
+            text-align: $val !important;
+        }
+    }
+    
+    // 不换行文字
+    .spice-text-nowrap#{$class}{
+        white-space: nowrap;
+    }
+
+    // 超出隐藏
+    .spice-overflow-hidden#{$class} {
+        overflow: hidden !important;
+    }
+    .spice-overflow-visible#{$class} {
+        overflow: visible !important;
+    }
+    .spice-overflow-auto#{$class} {
+        overflow: auto !important;
+    }
+}
+
+@media all{
+    @include baseHelper();
+}
+
+@media screen and (min-width:$screen-lg-min) {
+    @include baseHelper('-lg');
+}
+
+@media screen and (max-width: $screen-md-max) {
+    @include baseHelper('-md');
+}
+
+@media screen and (max-width:$screen-sm-max) {
+    @include baseHelper('-sm');
+}
+
+@media screen and (max-width:$screen-xs-max) {
+    @include baseHelper('-xs');
+}
+
+.spice-text-primary{
+	color: $state-primary-font-color;
+}
+.spice-text-success{
+	color: $state-success-font-color;
+}
+.spice-text-warning{
+	color: $state-warning-font-color;
+}
+.spice-text-error{
+	color: $state-error-font-color;
+}
+
+.spice-primary{
+	background-color: $state-primary-bg-color;
+	color: $state-primary-font-color;
+}
+.spice-success{
+	background-color: $state-success-bg-color;
+	color: $state-success-font-color;
+}
+.spice-warning{
+	background-color: $state-warning-bg-color;
+	color: $state-warning-font-color;
+}
+.spice-error{
+	background-color: $state-error-bg-color;
+	color: $state-error-font-color;
+}

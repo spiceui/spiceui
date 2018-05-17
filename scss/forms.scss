@@ -1,0 +1,99 @@
+.spice-form-control{
+	display: block;
+	width: 100%;
+	padding: $from-control-padding;
+	height: $from-control-height;
+	border-radius: $from-control-border-radius;
+	background-color: #fff;
+
+
+	&[multiple]{
+		padding: 0;
+
+		option{
+			padding: $from-control-padding;
+		}
+	}
+
+}
+
+textarea.spice-form-control{
+	height: auto;
+}
+
+.spice-checkbox, .spice-radio{
+	label{
+		position: relative;
+		padding-left: 20px;
+		margin-left: 10px;
+		margin-bottom: 0;
+
+		&:first-child{
+			margin-left: 0;
+		}
+
+		input{
+			// @include center-top();
+			position: absolute;
+			left: 0;
+			top: 5px;
+		}
+	}
+}
+
+.spice-form{
+	margin: $from-margin;
+}
+.spice-form-group{
+	margin: $from-group-margin;
+
+	&.spice-success{
+		color: $state-success-font-color;
+		background-color: transparent;
+
+		.spice-form-control{
+			border-color: $state-success-font-color;
+		}
+	}
+
+	&.spice-warning{
+		color: $state-warning-font-color;
+		background-color: transparent;
+
+		.spice-form-control{
+			border-color: $state-warning-font-color;
+		}
+	}
+
+	&.spice-error{
+		color: $state-error-font-color;
+		background-color: transparent;
+
+		.spice-form-control{
+			border-color: $state-error-font-color;
+		}
+	}
+}
+
+.spice-form-horizontal{
+	.spice-form-group{
+		@include float-clearfix();
+	}
+
+	.spice-control-label{
+		padding-top: 5px;
+	    margin-bottom: 0;
+	    text-align: right;
+	}
+}
+
+.spice-form-inline{
+	.spice-form-group, .spice-form-control{
+		@include inline-block();
+		vertical-align: middle;
+	}
+
+	.spice-form-control{
+		width: auto;
+	}
+}

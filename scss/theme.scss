@@ -1,0 +1,177 @@
+// 默认顶部样式
+.spice-header-default{
+    background-color: $header-default-bg-color;
+
+    .spice-navbar{
+        background-color: $header-default-bg-color;
+
+        .spice-brand{
+            a{
+                color: $header-default-font-hover-color;
+
+                &:hover{
+                    color: $header-default-font-hover-color;
+                }
+            }
+
+            .spice-navbar-toggle{
+                color: $header-default-font-hover-color;
+            }
+        }
+
+        .spice-nav-navbar{
+            background-color: $header-default-bg-color;
+        }
+    }
+    
+    .spice-nav{
+        > li{
+            > a{
+                color: $header-default-font-color;
+
+                &:hover{
+                    color: $header-default-font-hover-color;
+                    // background-color: $header-default-font-active-bg-color;
+                }
+            }
+
+            &.spice-active{
+                > a{
+                    color: $header-default-font-hover-color;
+                    // background-color: $header-default-font-active-bg-color;
+                }
+            }
+        }
+    }
+
+    .spice-dropdown{
+        .spice-btn{
+            background-color: transparent;
+        }
+
+        .spice-dropdown-menu{
+            // background-color: transparent;
+
+            // a{
+            //     color: $header-default-font-color;
+            //     background-color: $header-default-submenu-font-bg-color;
+
+            //     &:hover{
+            //         color: $header-default-font-hover-color;
+            //     }
+            // }
+
+            // > li{
+            //     &.spice-active{
+            //         a{
+            //             color: $header-default-font-hover-color;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
+
+// 默认底部样式
+.spice-footer-default{
+    background-color: $footer-default-bg-color;
+    padding: $footer-default-padding;
+    margin: $footer-default-margin;
+
+    p{
+        color: #fff;
+        text-align: center;
+        margin: 0;
+    }
+
+    a{
+        color: #fff;
+        margin: 0 5px;
+    }
+}
+
+// 默认树状菜单
+.spice-nav-tree-default{
+    background-color: $nav-tree-default-bg-color;
+
+    li{
+        a{
+            color: $nav-tree-default-font-color;
+            padding: $nav-tree-default-a-padding;
+
+            &:hover{
+                color: $nav-tree-default-font-hover-color;
+            }
+
+            .spice-fa{
+                margin: $nav-tree-default-fa-margin;
+            }
+        }
+
+        &.spice-active{
+            > a{
+                color: $nav-tree-default-font-hover-color;
+            }
+        }
+
+        > ul{
+            background-color: $nav-tree-default-submenu-bg-color;
+        }
+    }
+}
+
+// tab默认样式
+.spice-tab-default{
+    .spice-tab-title{
+        background-color: $tab-title-default-bg-color;
+        border-bottom: 2px solid $tab-title-default-bg-color;
+
+        li{
+            color: $tab-title-default-font-color;
+            border-left: $tab-title-default-li-border;
+
+            &:first-child{
+                border-left: none;
+            }
+
+            &.spice-active{
+                background-color: #fff;
+                color: $font-color;
+
+                &:after{
+                    display: none;
+                }
+            }
+
+
+        }
+    }
+}
+
+// 简版
+.spice-tab-brief{
+    .spice-tab-title{
+        li{
+            &.spice-active{
+                &:after{
+                    border: none;
+                    border-bottom: $tab-title-brief-li-border;
+                }
+            }
+        }
+    }
+}
+
+// 面板默认样式
+.spice-panel-default{
+    .spice-panel-head{
+        background-color: $panel-head-default-bg-color;
+        color: #fff;
+
+        > a{
+            &.spice-active{
+                color: #fff;    
+            }
+        }
+    }
+}
