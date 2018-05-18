@@ -1,17 +1,35 @@
 {
-  "name": "SpiceUI",
+  "name": "spiceui",
   "version": "1.0.0",
-  "description": "",
+  "description": "基于jQuery开发的UI框架",
   "scripts": {
     "pro": "export NODE_ENV=production&&webpack --watch --colors",
     "dev": "export NODE_ENV=develop&&webpack --watch --colors"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spiceui/spiceui.git"
+  },
+  "keywords": [
+    "css", "sass", "responsive", "front-end", "ui", "web"
+  ],
+  "main": "dist/js/spiceui.min.js",
+  "style": "dist/css/spiceui.min.css",
+  "files": [
+    "dist/js/spiceui.js",
+    "dist/js/spiceui.min.js",
+    "dist/css/spiceui.css",
+    "dist/css/spiceui.min.css",
+    "dist/fonts/fontawesome-webfont.eot",
+    "dist/fonts/fontawesome-webfont.svg",
+    "dist/fonts/fontawesome-webfont.ttf",
+    "dist/fonts/fontawesome-webfont.woff",
+    "dist/fonts/fontawesome-webfont.woff2"
+  ],
   "dependencies": {
-    "file-loader": "^1.1.11",
     "jquery": "~1.11.2",
     "jquery-migrate": "~1.2.1",
-    "lodash": "~4.17.4",
-    "url-loader": "^1.0.1"
+    "lodash": "~4.17.4"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.0",
@@ -29,6 +47,7 @@
     "expose-loader": "^0.7.3",
     "express": "^4.16.2",
     "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "file-loader": "^1.1.11",
     "hammerjs": "~2.0.8",
     "handlebars": "^4.0.11",
     "html-minifier": "^3.5.8",
@@ -37,8 +56,13 @@
     "postcss-loader": "^2.1.5",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "url-loader": "^1.0.1",
     "webpack": "^2.3.2"
   },
-  "author": "RazyLiang",
-  "license": "MIT"
+  "author": "spiceui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spiceui/spiceui/issues"
+  },
+  "homepage": "https://github.com/spiceui/spiceui#readme"
 }
