@@ -1,6 +1,6 @@
 {
   "name": "spiceui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "基于jQuery开发的UI框架",
   "scripts": {
     "pro": "export NODE_ENV=production&&webpack --watch --colors",
@@ -15,17 +15,6 @@
   ],
   "main": "dist/js/spiceui.min.js",
   "style": "dist/css/spiceui.min.css",
-  "files": [
-    "dist/js/spiceui.js",
-    "dist/js/spiceui.min.js",
-    "dist/css/spiceui.css",
-    "dist/css/spiceui.min.css",
-    "dist/fonts/fontawesome-webfont.eot",
-    "dist/fonts/fontawesome-webfont.svg",
-    "dist/fonts/fontawesome-webfont.ttf",
-    "dist/fonts/fontawesome-webfont.woff",
-    "dist/fonts/fontawesome-webfont.woff2"
-  ],
   "dependencies": {
     "jquery": "~1.11.2",
     "jquery-migrate": "~1.2.1",
@@ -64,5 +53,5 @@
   "bugs": {
     "url": "https://github.com/spiceui/spiceui/issues"
   },
-  "homepage": "https://github.com/spiceui/spiceui#readme"
+  "homepage": "http://www.spiceui.com"
 }
