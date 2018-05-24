@@ -33,7 +33,7 @@ spice.isString = (o) => {
 
 // 返回body下最大的zIndex值
 spice.getMaxZIndex = () => { 
-    return Math.max.apply(null, $('*', document.body).map(()=>{ return $(this).css('zIndex')>>>0; }).get());
+    return Math.max.apply(null, $('*', document.body).map(function(){ return $(this).css('zIndex')>>>0; }).get());
 }
 
 // 获取url所传参数的值

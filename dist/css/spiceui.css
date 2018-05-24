@@ -4014,7 +4014,8 @@ textarea.spice-form-control {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; }
+          user-select: none;
+  white-space: nowrap; }
   .spice-btn:hover {
     opacity: 0.9;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 90);

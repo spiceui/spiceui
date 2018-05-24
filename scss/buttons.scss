@@ -9,6 +9,7 @@
 	@include inline-block();
 	font-size: $btn-font-size;
 	user-select: none;
+	white-space: nowrap;
 
 	&:hover{
 		@include opacity(0.9);

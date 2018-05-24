@@ -399,7 +399,7 @@ spice.isString = function (o) {
 // 返回body下最大的zIndex值
 spice.getMaxZIndex = function () {
     return Math.max.apply(null, $('*', document.body).map(function () {
-        return $(undefined).css('zIndex') >>> 0;
+        return $(this).css('zIndex') >>> 0;
     }).get());
 };
 
