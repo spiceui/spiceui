@@ -22,21 +22,22 @@ textarea.spice-form-control{
 }
 
 .spice-checkbox, .spice-radio{
+	margin-left: -10px !important;
+
 	label{
 		position: relative;
 		padding-left: 20px;
 		margin-left: 10px;
 		margin-bottom: 0;
 
-		&:first-child{
-			margin-left: 0;
-		}
-
 		input{
-			// @include center-top();
 			position: absolute;
 			left: 0;
-			top: 5px;
+			margin: 3px 0 0;
+
+			&[type="radio"]{
+				margin-top: 2px;
+			}
 		}
 	}
 }

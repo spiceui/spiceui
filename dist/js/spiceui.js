@@ -15039,6 +15039,7 @@ var Pagination = function () {
 				options.pageSize = val || pageSize;
 				self._pageSize = options.pageSize;
 				self.pageNumber = Math.ceil(total / options.pageSize);
+				self.currentPage = 1;
 				self.initButton();
 			}
 		}

@@ -10,6 +10,7 @@
 	font-size: $btn-font-size;
 	user-select: none;
 	white-space: nowrap;
+	vertical-align: middle;
 
 	&:hover{
 		@include opacity(0.9);
