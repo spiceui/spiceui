@@ -3901,7 +3901,8 @@ textarea.spice-form-control {
 .spice-form-horizontal .spice-control-label {
   padding-top: 5px;
   margin-bottom: 0;
-  text-align: right; }
+  text-align: right;
+  margin-left: 0; }
 
 .spice-form-inline .spice-form-group, .spice-form-inline .spice-form-control {
   display: inline-block;
